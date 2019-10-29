@@ -6,11 +6,15 @@ class ClickityClick extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            hasBeenClicked = false
+            hasBeenClicked: false
         };
     }   
     handleClick = () =>{
-        this.setState((prevState,props) => {hasBeenClicked: !prevState.hasBeenClicked})
+        this.setState((prevState) => {
+            return {
+                hasBeenClicked: !prevState.hasBeenClicked
+            }
+        })
     }
 
     render() {
